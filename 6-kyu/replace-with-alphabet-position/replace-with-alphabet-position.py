@@ -1,8 +1,5 @@
 def alphabet_position(text):
-    numbers = []
+    new_text = "".join(text.split()).lower()
+    result = " ".join(str(ord(letter) - ord('a') + 1) for letter in new_text if "a" <= letter <="z")
     
-    for char in text.lower():
-        if "a" <= char <= "z":
-            numbers.append(ord(char) - ord("a") + 1)
-    
-    return " ".join(str(num) for num in numbers)
+    return result
