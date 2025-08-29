@@ -1,15 +1,16 @@
-def zero(f=None): return 0 if not f else f(0) #your code here
-def one(f=None): return 1 if not f else f(1)#your code here
-def two(f=None): return 2 if not f else f(2)#your code here
-def three(f=None): return 3 if not f else f(3)#your code here
-def four(f=None): return 4 if not f else f(4)#your code here
-def five(f=None): return 5 if not f else f(5)#your code here
-def six(f=None): return 6 if not f else f(6)#your code here
-def seven(f=None): return 7 if not f else f(7)#your code here
-def eight(f=None): return 8 if not f else f(8)#your code here
-def nine(f=None): return 9 if not f else f(9)#your code here
+def zero(op=None): return 0 if not op else op(0)
+def one(op=None): return 1 if not op else op(1)
+def two(op=None): return 2 if not op else op(2)
+def three(op=None): return 3 if not op else op(3)
+def four(op=None): return 4 if not op else op(4)
+def five(op=None): return 5 if not op else op(5)
+def six(op=None): return 6 if not op else op(6)
+def seven(op=None): return 7 if not op else op(7)
+def eight(op=None): return 8 if not op else op(8)
+def nine(op=None): return 9 if not op else op(9)
 ​
-def plus(b): return lambda a: a + b  #your code here
-def minus(b): return lambda a: a - b #your code here
-def times(b): return lambda a: a * b #your code here
-def divided_by(b): return lambda a: a // b #your code here
+def plus(a): return lambda n: n + a
+def minus(a): return lambda n: n - a
+def times(a): return lambda n: n * a
+def divided_by(a): return lambda n: n // a   # integer division
+​
