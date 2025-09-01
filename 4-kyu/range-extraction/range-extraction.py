@@ -1,16 +1,38 @@
 def solution(args):
-    result = []
+    if not args:
+        return ""
 ​
-    while args:
-        start = args.pop(0)
-        temp = [start]
+    res = []
+    start = args[0]
+    count = 1
 ​
-        while args and args[0] == temp[-1] + 1:
-            temp.append(args.pop(0))
-​
-        if len(temp) >= 3:
-            result.append(f"{temp[0]}-{temp[-1]}")
+    for i in range(1, len(args)):
+        if args[i] == args[i - 1] + 1:
+            count += 1
         else:
-            result.extend(str(x) for x in temp)
+            finish = args[i - 1]
+            if count >= 3:
+                res.append(f"{start}-{finish}")
+            elif count == 2:
+                res.append(str(start))
+                res.append(str(finish))
+            else:
+                res.append(str(start))
+            start = args[i]
+            count = 1
 ​
-    return ",".join(result)
+           
+    finish = args[-1]
+    if count >= 3:
+        res.append(f"{start}-{finish}")
+    elif count == 2:
+        res.append(str(start))
+        res.append(str(finish))
+    else:
+        res.append(str(start))
+​
+    return ",".join(res)
+            
+            
+        
+        
